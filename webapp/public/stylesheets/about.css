@@ -1,0 +1,65 @@
+hr {
+	margin: 0;
+	width: 40%;
+}
+
+.about {
+	margin: 0;
+	padding: 0;
+}
+
+.sec-about hr {
+	margin: 0 auto;
+	width: 25%;
+	text-align: center;
+}
+
+.jumbotron {
+	position: relative;
+	background: url(/assets/plates.jpeg) no-repeat bottom center/cover;
+}
+
+.jumbotron:before {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.jumbotron .container {
+	padding: 100px 0;
+}
+
+.jumbotron h1,
+.jumbotron .lead {
+	color: #fff;
+}
+
+.btn-primary {
+	background: #1096fc;
+	border: 0;
+}
+
+.btn-primary:hover {
+	background: #0384e5;
+}
+
+.sec-features .row:nth-of-type(n+2) {
+	margin-top: 160px;
+}
+
+.sec-features .row:last-of-type {
+  margin-bottom: 160px;
+}
+
+.sec-features .feature-icon {
+  max-width: 150px;
+}
+
+a {
+	text-decoration: none;
+	color: #e9e9e9;
+}

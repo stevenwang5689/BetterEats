@@ -1,0 +1,92 @@
+Using capital one api.
+we can get purchases by merchant id
+merchant name contains category id
+
+
+capitol one api: get all purchases, categorize by resturaunt?
+google search api: get result back
+google keep api: add ingredients to shopping list
+
+Capitol one api:
+_id: "59f4d231a73e4942cdafe5de"
+checking account
+Forrest's Account
+balance: 18710
+customer _id: "59f4d230a73e4942cdafe5db"
+
+getting customer info:
+	request url:
+		http://api.reimaginebanking.com/accounts/[id]/customer?key={api key}
+	response model:
+		{
+ 			"_id": "string",
+ 			"first_name": "string",
+ 			"last_name": "string",
+ 			"address": {
+ 			  "street_number": "string",
+ 			  "street_name": "string",
+ 			  "city": "string",
+ 			  "state": "string",
+ 			  "zip": "string"
+ 			}
+		}
+
+getting purchases:
+	request url:
+		http://api.reimaginebanking.com/accounts/[id]/purchases?key={api key}
+	response model:
+		[
+  			{
+  			  "_id": "string",
+  			  "type": "merchant",
+  			  "merchant_id": "string",
+  			  "payer_id": "string",
+  			  "purchase_date": "2017-10-28",
+  			  "amount": 0.01,
+  			  "status": "pending",
+  			  "medium": "balance",
+  			  "description": "string"
+  			}
+		]
+
+getting merchants:
+	request url:
+		http://api.reimaginebanking.com/merchants?key={api key}
+	response model:
+		[
+			{
+			  "_id": "string",
+			  "name": "string",
+			  "category": [
+			    "string"
+			  ],
+			  "address": {
+			    "street_number": "string",
+			    "street_name": "string",
+			    "city": "string",
+			    "state": "string",
+			    "zip": "string"
+			  },
+			  "geocode": {
+			    "lat": 0,
+			    "lng": 0
+			  }
+			}
+		]
+	remove all merchants that arent in the resturaunt category
+
+	use this list to cross reference purchases and remove all non resturaunt purchases
+
+adding in transactions:
+	post url:
+		http://api.reimaginebanking.com/accounts/[id]/purchases?key={api key}
+	body model:
+		{
+			"merchant_id": "string",
+			"medium": "balance",
+			"purchase_date": "2017-10-28",
+			"amount": 0.01,
+			"description": "string"
+		}
+
+	use this to add transactions to the account we will need to get specific merchant ids, make sure they are resturaunt category.

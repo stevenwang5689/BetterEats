@@ -1,0 +1,72 @@
+* {
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.2;
+	vertical-align: middle;
+}
+
+body {
+	background: #88BBD6;
+}
+
+main {
+	display: block;
+	position: relative;
+	width: 30rem;
+	margin: 3vh auto;
+	padding: 1.5rem 0 0;
+	background: #d5d5d5;
+	outline
+	border-radius: 0.25rem;
+	overflow: hidden;
+	transform: scale(0.75);
+	transform-origin: center 3rem;
+	transition: transform .3s;
+}
+
+.card {
+	position: relative;
+	z-index: 2;
+	padding: 1.5rem;
+	box-shadow: 0 1px 2px #aaa;
+	background: #FDFFFC;
+	margin: 0 1rem 1rem;
+	border-radius: 4px;
+	user-select: none;
+
+}
+
+.card h1 {
+	font-size: 2rem;
+	font-weight: 200;
+	display: inline-flex;
+}
+	strong {
+		font-weight: 300;
+		color: #0E103D;
+		flex: 1;
+	}
+
+.card div:last-child {
+  margin-left: auto;
+}
+
+.card h2 {
+	font-size: 0.9rem;
+	line-height: 2.5;
+	color: grey;
+	font-weight: 400;
+}
+
+iframe {
+	width: 100%;
+	height: 375px;
+	border-radius: 5px;
+}
+
+.box {
+	display: block;
+	width: 100%;
+	position: relative;
+	z-index: 100;
+}
+
